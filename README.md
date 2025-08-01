@@ -44,14 +44,14 @@ systemctl start chronyd
 
 systemctl enable chronyd
 ```
-### configure selinux policies for the webservers and nginx servers
+### Configure selinux policies for the webservers and nginx servers
 ```
 setsebool -P httpd_can_network_connect=1
 setsebool -P httpd_can_network_connect_db=1
 setsebool -P httpd_execmem=1
 setsebool -P httpd_use_nfs 1
 ```
-### This section will instll amazon efs utils for mounting the target on the Elastic file system
+### This section will install amazon efs utils for mounting the target on the Elastic file system
 ```
 git clone https://github.com/aws/efs-utils
 
@@ -65,7 +65,7 @@ make rpm
 
 yum install -y  ./build/amazon-efs-utils*rpm
 ```
-### Seting up self-signed certificate for the nginx instance
+### Setting up self-signed certificate for the nginx instance
 ```
 sudo mkdir /etc/ssl/private
 
@@ -76,7 +76,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/ACS
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
 
-### webserver ami installation 
+### Webserver ami installation 
 ```
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 
@@ -88,14 +88,14 @@ systemctl start chronyd
 
 systemctl enable chronyd
 ```
-### configure selinux policies for the webservers and nginx servers
+### Configure selinux policies for the webservers and nginx servers
 ```
 setsebool -P httpd_can_network_connect=1
 setsebool -P httpd_can_network_connect_db=1
 setsebool -P httpd_execmem=1
 setsebool -P httpd_use_nfs 1
 ```
-### this section will install amazon efs utils for mounting the target on the Elastic file system
+### This section will install amazon efs utils for mounting the target on the Elastic file system
 ```
 git clone https://github.com/aws/efs-utils
 
@@ -110,7 +110,7 @@ make rpm
 yum install -y  ./build/amazon-efs-utils*rpm
 ```
 
-### seting up self-signed certificate for the apache  webserver instance
+### Setting up self-signed certificate for the apache webserver instance
 ```
 yum install -y mod_ssl
 
@@ -120,7 +120,7 @@ vi /etc/httpd/conf.d/ssl.conf
 ```
 
 
-### Login into the RDS instnace  and create  database for wordpress and tooling wordpress and tooling database
+### Logging into the RDS instance and create database for wordpress and tooling wordpress and tooling database
 mysql -h acs-database.cdqpbjkethv0.us-east-1.rds.amazonaws.com -u ACSadmin -p 
 
 CREATE DATABASE toolingdb;

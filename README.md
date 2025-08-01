@@ -6,7 +6,7 @@
 
 ### Project Design Architecture Diagram
 
-![Alt text](Images/example.png)
+![](./Images/architecture%20diagram.PNG)
 
 # Installation instructions
 - Azure portal, Microsoft Remote Desktop, SQL Server, SQL Server Management Studio (SSMS), Azure Data Studio, integration runtime

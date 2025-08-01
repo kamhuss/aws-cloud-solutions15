@@ -5,6 +5,6 @@ In this project, we will build a secure infrastructure inside AWS VPC (Virtual P
 
 Cost, Security, and Scalability are the major requirements for this project. Hence, implementing the architecture designed below, ensure that infrastructure for both websites, WordPress and Tooling, is resilient to Web Server’s failures, can accomodate to increased traffic and, at the same time, has reasonable cost.
 
-## Project Design Architecture Diagram
+### Project Design Architecture Diagram
 
 
